@@ -1,0 +1,542 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap");
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Roboto", "Ubuntu", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #f3f3f3;
+  border-bottom: solid black 2px;
+  justify-content: space-between;
+  position: fixed;
+  max-height: 14vh;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.navbar__btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 22px;
+  right: 15px;
+  -webkit-transition: 0.2s 0.1s;
+  transition: 0.2s 0.1s;
+}
+
+.navbar__btn span {
+  background-color: black;
+  display: block;
+  height: 3px;
+  width: 25px;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.navbar__menu {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 2vh;
+  margin: 0;
+  padding: 0;
+  display: none;
+  opacity: 0;
+  width: 100%;
+}
+
+.navbar__link {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: black;
+  font-weight: 600;
+}
+
+.navbar__list {
+  list-style-type: none;
+  transition: 0.3s;
+  text-align: center;
+  padding: 10px;
+}
+
+.navbar__link i {
+  display: none;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------- */
+
+@keyframes muestraMenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar.activado {
+  max-height: 100vh;
+}
+
+.navbar__menu.activado {
+  display: flex;
+  animation: muestraMenu 750ms ease-in-out both;
+  height: 60vh;
+}
+
+.navbar__menu.close {
+  display: none;
+}
+
+.br-1.animado {
+  transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.br-2.animado {
+  opacity: 0;
+}
+
+.br-3.animado {
+  transform: rotate(45deg) translate(-10px, -8px);
+}
+
+.navbar__btn:hover {
+  transform: rotate(180deg);
+}
+
+/* --------------------------------------------------------- */
+
+.main__bg {
+  padding-top: 1vh;
+  background: url(/img/fondo.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 86vh;
+}
+
+.main__container {
+  margin: 14vh auto auto auto;
+  text-align: center;
+  align-items: center;
+  width: 280px;
+}
+
+.main__title {
+  background-color: black;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.main__text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.main__btn {
+  background-color: transparent;
+  width: 150px;
+  height: 50px;
+  border: solid black 2px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.main__btn:hover {
+  color: white;
+  background-color: black;
+  transition: 0.5s;
+}
+
+/* --------------------------------------------------------- */
+.servicios__grid {
+  margin-bottom: 55px;
+}
+
+.servicios__title {
+  font-size: 2.5rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 8px 0;
+  margin-bottom: 15px;
+}
+
+.servicios__text {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: -30px;
+}
+
+.servicios__imgs {
+  clip-path: circle(40% at 50% 40%);
+  width: 200px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin: auto;
+}
+
+.servicios__img-bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 183, 123, 0.6);
+  transition: all 500ms ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.servicios__imgs:hover > .servicios__img-bg {
+  opacity: 1;
+  visibility: visible;
+}
+
+.servicios__text-bg {
+  font-size: 2rem;
+  padding: 40px;
+  text-align: center;
+}
+
+.servicio__main-btn {
+  text-align: center;
+}
+
+.servicio__btn {
+  background-color: transparent;
+  width: 200px;
+  height: 50px;
+  border: solid black 2px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.servicio__btn:hover {
+  color: white;
+  background-color: black;
+  transition: 0.5s;
+}
+
+/* --------------------------------------------------------- */
+.contacto {
+  border-top: 2px black solid;
+  background-color: salmon;
+  align-items: center;
+  padding: 20px;
+}
+.contacto__title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 2px;
+}
+
+.contacto__menu {
+  display: flex;
+  justify-content: center;
+}
+
+.contacto__list {
+  list-style-type: none;
+  padding: 0 8px;
+}
+
+.contacto__link {
+  font-size: 2rem;
+  color: black;
+}
+.contacto__link:hover {
+  color: white;
+}
+
+.contacto__num {
+  list-style-type: none;
+  font-size: 2rem;
+}
+/* --------------------------------------------------------- */
+
+.diseños__title {
+  font-size: 2.5rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 8px 0;
+  margin-bottom: 40px;
+}
+
+.slide {
+  display: none;
+}
+
+.slide__mobile {
+  text-align: center;
+}
+
+.diseño__main-btn {
+  text-align: center;
+}
+
+.diseño__btn {
+  background-color: transparent;
+  width: 200px;
+  height: 50px;
+  border: solid black 2px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 30px auto;
+}
+
+.hi-slide {
+  position: relative;
+  width: 754px;
+  height: 292px;
+  margin: 115px auto 0;
+}
+
+.hi-slide .hi-next,
+.hi-slide .hi-prev {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  border-radius: 50px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transition: all 0.7s;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hi-slide .hi-next:hover,
+.hi-slide .hi-prev:hover {
+  opacity: 1;
+  border-color: white;
+}
+
+.hi-slide .hi-prev {
+  left: -70px;
+}
+
+.hi-slide .hi-prev::before {
+  content: "<";
+}
+
+.hi-slide .hi-next {
+  right: -70px;
+}
+
+.hi-slide .hi-next::before {
+  content: ">";
+}
+
+.hi-slide > ul {
+  z-index: 0;
+  list-style: none;
+  position: relative;
+  width: 754px;
+  height: 292px;
+  margin: 0;
+  padding: 0;
+}
+
+.hi-slide > ul > li {
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  left: 377px;
+  top: 147px;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 3px solid white;
+  background-color: #333;
+  cursor: pointer;
+}
+
+.hi-slide > ul > li > img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
+
+/******************************************************************************/
+#servicios__main {
+  text-align: center;
+  margin-top: 13vh;
+}
+
+.card__title-servicios {
+  font-size: 2rem;
+  text-align: center;
+  padding: 6px;
+  background-color: black;
+  color: white;
+}
+
+.card__title-serviciosh2 {
+  font-size: 2rem;
+  text-decoration: underline 1px;
+}
+
+.card__img {
+  width: 120px;
+  height: 120px;
+}
+
+.card__servicios {
+  text-align: center;
+  border-radius: 5px;
+}
+.card__img-main-servicios {
+  margin: 20px 10px;
+  border: black 2px solid;
+  border-radius: 5px;
+}
+.card__text-servicios {
+  padding: 10px;
+  font-size: 2rem;
+}
+
+/******************************************************************************/
+
+/******************************************************************************/
+
+@media (min-width: 768px) {
+  .navbar__logo {
+    height: 15%;
+    width: 15%;
+  }
+
+  .main__container {
+    margin: 18vh auto auto auto;
+  }
+
+  .main__bg {
+    padding-top: 1vh;
+    background: url(/img/fondo1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 86vh;
+  }
+
+  .contacto {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .servicios__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card__servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar__btn {
+    display: none;
+  }
+
+  .navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: #f3f3f3;
+    border-bottom: solid black 2px;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  .navbar__menu {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    height: 2vh;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    width: 60%;
+  }
+
+  .navbar__list {
+    list-style-type: none;
+    transition: 0.3s;
+    margin: 0;
+  }
+
+  .navbar__link {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: black;
+    font-weight: 600;
+  }
+
+  .navbar__link:hover {
+    color: white;
+    background-color: black;
+    transition: 0.5s;
+  }
+
+  .slide {
+    display: block;
+    margin-top: 50px;
+  }
+
+  .slide__mobile {
+    display: none;
+  }
+
+  .card__servicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .servicios__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .navbar__menu {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1750px) {
+  #servicios__main {
+    text-align: center;
+    margin-top: 11vh;
+  }
+}
