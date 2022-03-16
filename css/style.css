@@ -123,15 +123,30 @@ html {
 }
 
 /* --------------------------------------------------------- */
+@keyframes animationHero {
+  0% {
+    width: 0vw;
+  }
+  100% {
+    width: 100vw;
+  }
+}
 
 .main__bg {
   padding-top: 1vh;
   background: url(/img/fondo.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 86vh;
+  animation-name: animationHero;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
 }
 
 .main__container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
   margin: 14vh auto auto auto;
   text-align: center;
   align-items: center;
@@ -152,7 +167,8 @@ html {
 }
 
 .main__btn {
-  background-color: transparent;
+  /*background-color: transparent;*/
+  background: linear-gradient(to bottom right, salmon, white);
   width: 150px;
   height: 50px;
   border: solid black 2px;
@@ -162,9 +178,9 @@ html {
 }
 
 .main__btn:hover {
-  color: white;
-  background-color: black;
-  transition: 0.5s;
+  /*color: white;*/
+  background: linear-gradient(to bottom right, white, salmon);
+  transition: 0.8s;
 }
 
 /* --------------------------------------------------------- */
@@ -223,7 +239,8 @@ html {
 }
 
 .servicio__btn {
-  background-color: transparent;
+  /*background-color: transparent;*/
+  background: linear-gradient(to bottom right, salmon, white);
   width: 200px;
   height: 50px;
   border: solid black 2px;
@@ -233,8 +250,8 @@ html {
   margin-bottom: 30px;
 }
 .servicio__btn:hover {
-  color: white;
-  background-color: black;
+  /*color: white;*/
+  background: linear-gradient(to bottom right, white, salmon);
   transition: 0.5s;
 }
 
@@ -297,7 +314,8 @@ html {
 }
 
 .diseño__btn {
-  background-color: transparent;
+  /*background-color: transparent;*/
+  background: linear-gradient(to bottom right, salmon, white);
   width: 200px;
   height: 50px;
   border: solid black 2px;
@@ -305,6 +323,12 @@ html {
   font-weight: 700;
   cursor: pointer;
   margin: 30px auto;
+}
+
+.diseño__btn:hover {
+  /*color: white;*/
+  background: linear-gradient(to bottom right, white, salmon);
+  transition: 0.5s;
 }
 
 .hi-slide {
@@ -438,10 +462,10 @@ html {
   }
 
   .main__bg {
-    padding-top: 1vh;
     background: url(/img/fondo1.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 86vh;
+    animation-name: animationHero;
   }
 
   .contacto {
