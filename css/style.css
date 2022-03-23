@@ -13,53 +13,7 @@ html {
 }
 
 .navbar {
-  background-color: #f3f3f3;
   border-bottom: solid black 2px;
-  justify-content: space-between;
-  position: fixed;
-  max-height: 14vh;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.navbar__btn {
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  top: 22px;
-  right: 15px;
-  -webkit-transition: 0.2s 0.1s;
-  transition: 0.2s 0.1s;
-}
-
-.navbar__btn span {
-  background-color: black;
-  display: block;
-  height: 3px;
-  width: 25px;
-  margin: 10px auto;
-  border-radius: 2px;
-}
-
-.logo img {
-  width: 100px;
-  height: 100px;
-}
-
-.navbar__menu {
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 2vh;
-  margin: 0;
-  padding: 0;
-  display: none;
-  opacity: 0;
-  width: 100%;
 }
 
 .navbar__link {
@@ -67,59 +21,13 @@ html {
   font-size: 1.8rem;
   color: black;
   font-weight: 600;
+  padding: 5px;
 }
 
-.navbar__list {
-  list-style-type: none;
-  transition: 0.3s;
-  text-align: center;
-  padding: 10px;
-}
-
-.navbar__link i {
-  display: none;
-  text-decoration: none;
-}
-
-/* --------------------------------------------------------- */
-
-@keyframes muestraMenu {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.navbar.activado {
-  max-height: 100vh;
-}
-
-.navbar__menu.activado {
-  display: flex;
-  animation: muestraMenu 750ms ease-in-out both;
-  height: 60vh;
-}
-
-.navbar__menu.close {
-  display: none;
-}
-
-.br-1.animado {
-  transform: rotate(-45deg) translate(-10px, 8px);
-}
-
-.br-2.animado {
-  opacity: 0;
-}
-
-.br-3.animado {
-  transform: rotate(45deg) translate(-10px, -8px);
-}
-
-.navbar__btn:hover {
-  transform: rotate(180deg);
+.navbar__link:hover {
+  color: white;
+  background-color: black;
+  transition: 0.8s;
 }
 
 /* --------------------------------------------------------- */
@@ -167,8 +75,7 @@ html {
 }
 
 .main__btn {
-  /*background-color: transparent;*/
-  background: linear-gradient(to bottom right, salmon, white);
+  background-color: transparent;
   width: 150px;
   height: 50px;
   border: solid black 2px;
@@ -178,8 +85,8 @@ html {
 }
 
 .main__btn:hover {
-  /*color: white;*/
-  background: linear-gradient(to bottom right, white, salmon);
+  color: white;
+  background: black;
   transition: 0.8s;
 }
 
@@ -199,8 +106,13 @@ html {
 
 .servicios__text {
   text-align: center;
-  font-size: 1.5rem;
-  margin-top: -30px;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: -30px 20px 0 20px;
+}
+.servicios__text:hover {
+  color: white;
+  background-color: black;
 }
 
 .servicios__imgs {
@@ -239,8 +151,7 @@ html {
 }
 
 .servicio__btn {
-  /*background-color: transparent;*/
-  background: linear-gradient(to bottom right, salmon, white);
+  background-color: transparent;
   width: 200px;
   height: 50px;
   border: solid black 2px;
@@ -250,12 +161,13 @@ html {
   margin-bottom: 30px;
 }
 .servicio__btn:hover {
-  /*color: white;*/
-  background: linear-gradient(to bottom right, white, salmon);
+  color: white;
+  background-color: black;
   transition: 0.5s;
 }
 
 /* --------------------------------------------------------- */
+
 .contacto {
   border-top: 2px black solid;
   background-color: salmon;
@@ -271,6 +183,7 @@ html {
 .contacto__menu {
   display: flex;
   justify-content: center;
+  margin-top: 8px;
 }
 
 .contacto__list {
@@ -281,9 +194,12 @@ html {
 .contacto__link {
   font-size: 2rem;
   color: black;
+  padding: 5px;
 }
+
 .contacto__link:hover {
   color: white;
+  background-color: black;
 }
 
 .contacto__num {
@@ -314,8 +230,7 @@ html {
 }
 
 .diseño__btn {
-  /*background-color: transparent;*/
-  background: linear-gradient(to bottom right, salmon, white);
+  background-color: transparent;
   width: 200px;
   height: 50px;
   border: solid black 2px;
@@ -326,8 +241,8 @@ html {
 }
 
 .diseño__btn:hover {
-  /*color: white;*/
-  background: linear-gradient(to bottom right, white, salmon);
+  color: white;
+  background: black;
   transition: 0.5s;
 }
 
@@ -412,51 +327,231 @@ html {
 /******************************************************************************/
 #servicios__main {
   text-align: center;
-  margin-top: 13vh;
+  margin-top: 12vh;
 }
 
 .card__title-servicios {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   padding: 6px;
   background-color: black;
   color: white;
 }
 
-.card__title-serviciosh2 {
-  font-size: 2rem;
+.card__title-h5 {
+  font-size: 2.2rem;
+  font-weight: 700;
   text-decoration: underline 1px;
+  margin-bottom: 15px;
 }
 
 .card__img {
-  width: 120px;
-  height: 120px;
-}
-
-.card__servicios {
-  text-align: center;
-  border-radius: 5px;
-}
-.card__img-main-servicios {
-  margin: 20px 10px;
-  border: black 2px solid;
-  border-radius: 5px;
-}
-.card__text-servicios {
-  padding: 10px;
-  font-size: 2rem;
+  height: 250px;
+  padding: 20px;
 }
 
 /******************************************************************************/
+.diseño-mt {
+  margin-top: 12vh;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+.columna {
+  flex: 20%;
+  max-width: 20%;
+  padding: 0 4px;
+}
+
+.columna img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.columna img:hover {
+  cursor: zoom-in;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.7s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay .slideshow {
+  width: 90%;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.slideshow img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.btn_cerrar {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 35px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  transition: all 0.2s ease;
+}
+
+.btn_cerrar:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.botones {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: rgb(240, 106, 45);
+}
+
+.botones:hover > i {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+.atras {
+  left: 20px;
+}
+
+.adelante {
+  right: 20px;
+}
+
+.mdi {
+  pointer-events: none;
+}
+
+@media screen and (max-width: 800px) {
+  .columna {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+  .botones {
+    font-size: 55px;
+  }
+
+  .atras {
+    left: 5px;
+  }
+
+  .adelante {
+    right: 5px;
+  }
+
+  .slideshow img {
+    width: 98%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .columna {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/******************************************************************************/
+#alquileres {
+  margin-top: 12vh;
+}
+
+.card__title {
+  font-size: 3rem;
+  text-align: center;
+  padding: 6px;
+  background-color: black;
+  color: white;
+}
+
+.card__alquileres {
+  display: flex;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.card__img-main {
+  margin: auto 10px;
+}
+
+.card__text {
+  font-size: 2rem;
+  border-top: black 2px solid;
+  border-bottom: black 2px solid;
+}
+
+.turnos__title {
+  font-size: 2.5rem;
+  padding-top: 2px;
+  text-align: center;
+  width: 100%;
+  height: 35px;
+  color: white;
+  background-color: black;
+  margin: 0;
+}
+
+#tabla {
+  margin-bottom: 15px;
+}
+
+th {
+  font-size: 20px;
+}
+
+td {
+  font-size: 15px;
+}
 
 /******************************************************************************/
 
 @media (min-width: 768px) {
-  .navbar__logo {
-    height: 15%;
-    width: 15%;
-  }
-
   .main__container {
     margin: 18vh auto auto auto;
   }
@@ -490,48 +585,6 @@ html {
     display: none;
   }
 
-  .navbar {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    background-color: #f3f3f3;
-    border-bottom: solid black 2px;
-    right: 0;
-    left: 0;
-    top: 0;
-    z-index: 1;
-  }
-
-  .navbar__menu {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    height: 2vh;
-    margin: 0;
-    padding: 0;
-    opacity: 1;
-    width: 60%;
-  }
-
-  .navbar__list {
-    list-style-type: none;
-    transition: 0.3s;
-    margin: 0;
-  }
-
-  .navbar__link {
-    text-decoration: none;
-    font-size: 1.8rem;
-    color: black;
-    font-weight: 600;
-  }
-
-  .navbar__link:hover {
-    color: white;
-    background-color: black;
-    transition: 0.5s;
-  }
-
   .slide {
     display: block;
     margin-top: 50px;
@@ -555,12 +608,5 @@ html {
 
   .navbar__menu {
     justify-content: flex-end;
-  }
-}
-
-@media (min-width: 1750px) {
-  #servicios__main {
-    text-align: center;
-    margin-top: 11vh;
   }
 }
