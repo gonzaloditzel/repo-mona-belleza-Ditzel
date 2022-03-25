@@ -4,6 +4,7 @@
   align-items: center;
   padding: 20px;
   .contacto__title {
+    color: $primaryColor;
     text-align: center;
     font-size: 1.8rem;
     margin: 2px;
@@ -29,6 +30,7 @@
       }
     }
     .contacto__num {
+      color: $primaryColor;
       list-style-type: none;
       font-size: 2rem;
     }
