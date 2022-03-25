@@ -1,0 +1,32 @@
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  .navbar {
+    border-bottom: solid $primaryColor 2px;
+
+    .navbar__link {
+      text-decoration: none;
+      font-size: 1.8rem;
+      color: $primaryColor;
+      font-weight: 600;
+      padding: 5px;
+
+      &:hover {
+        color: $secondaryColor;
+        background-color: $primaryColor;
+        transition: 0.8s;
+      }
+    }
+    .navbar__list--contacto {
+      list-style-type: none;
+      padding: 0 8px;
+
+      .navbar__link--contacto {
+        font-size: 2rem;
+        color: $primaryColor;
+        padding: 5px;
+      }
+    }
+  }
+}

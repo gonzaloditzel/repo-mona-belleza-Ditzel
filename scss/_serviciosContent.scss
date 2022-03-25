@@ -1,0 +1,21 @@
+#servicios__main {
+  .card__title-servicios {
+    font-size: 3rem;
+    text-align: center;
+    padding: 6px;
+    background-color: $primaryColor;
+    color: $secondaryColor;
+  }
+  .container-fluid {
+    .card__img {
+      height: 250px;
+      padding: 20px;
+    }
+    .card__title-h5 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-decoration: underline 1px;
+      margin-bottom: 15px;
+    }
+  }
+}
