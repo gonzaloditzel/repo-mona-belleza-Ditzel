@@ -1,0 +1,55 @@
+#hero {
+  @keyframes animationHero {
+    0% {
+      width: 0vw;
+    }
+    100% {
+      width: 100vw;
+    }
+  }
+  background: url(/img/fondo.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 80vh;
+  animation-name: animationHero;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+
+  .main__container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: 16vh auto auto auto;
+    text-align: center;
+    align-items: center;
+    width: 280px;
+
+    .main__title {
+      background-color: $primaryColor;
+      color: $secondaryColor;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .main__text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .main__btn {
+      background-color: transparent;
+      width: 150px;
+      height: 50px;
+      border: solid $primaryColor 2px;
+      font-size: 1.6rem;
+      font-weight: 700;
+      cursor: pointer;
+
+      &:hover {
+        color: $secondaryColor;
+        background: $primaryColor;
+        transition: 0.8s;
+      }
+    }
+  }
+}

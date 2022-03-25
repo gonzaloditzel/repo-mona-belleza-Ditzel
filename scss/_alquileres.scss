@@ -1,0 +1,43 @@
+#alquileres {
+  .alquileres__title {
+    font-size: 3rem;
+    text-align: center;
+    padding: 6px;
+    background-color: $primaryColor;
+    color: $secondaryColor;
+  }
+
+  .card__title-h5 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-decoration: underline 2px;
+  }
+
+  .card-text {
+    color: gray;
+  }
+}
+
+.turnos__title {
+  font-size: 2.5rem;
+  padding-top: 2px;
+  text-align: center;
+  width: 100%;
+  height: 35px;
+  color: $secondaryColor;
+  background-color: $primaryColor;
+  margin: 0;
+}
+
+#tabla {
+  width: 80%;
+  margin: auto auto 14px auto;
+
+  th {
+    font-size: 20px;
+  }
+
+  td {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,86 @@
+@media (min-width: 500px) {
+  .servicios__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .slide {
+    display: none;
+  }
+
+  .slide__mobile {
+    margin: 0 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  #contacto {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+
+    .contacto__title {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .contacto__menu {
+      margin-top: 10px;
+    }
+  }
+
+  .main__container {
+    margin: 18vh auto auto auto;
+  }
+
+  #hero {
+    background: url(/img/fondo1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 75vh;
+    animation-name: animationHero;
+  }
+
+  .slide__mobile {
+    display: none;
+  }
+
+  .contacto {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .servicios__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card__servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar__btn {
+    display: none;
+  }
+
+  .card__servicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .servicios__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .navbar__menu {
+    justify-content: flex-end;
+  }
+}
