@@ -1,15 +1,266 @@
-@import "_commons";
-@import "_reset";
-@import "_navbar";
-@import "_hero";
-@import "_servicios";
-@import "_diseños";
-@import "_contacto";
-@import "_serviciosContent";
-@import "_diseñosContent";
-@import "_alquileres";
-@import "_screens";
+@import "./commons/commons";
+@import "./commons/reset";
+@import "./components/hero";
+@import "./components/navbar";
+@import "./components/footer";
+@import "./components/btn";
+@import "./components/title";
+@import "./screens/screens";
 
+
+/****************************** SERVICIOS INDEX *****************************/
+
+#servicios {
+  .servicios__grid {
+    margin-bottom: 55px;
+
+    .servicios__grid--container {
+      .servicios__imgs {
+        clip-path: circle(40% at 50% 40%);
+        width: 200px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        margin: auto;
+
+        &:hover > .servicios__img-bg {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .servicios__img-bg {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(11, 183, 123, 0.6);
+          transition: all 500ms ease-in-out;
+          opacity: 0;
+          visibility: hidden;
+
+          .servicios__text-bg {
+            @include text(center, 2rem, 600);
+            padding: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/****************************** PAGINA SERVICIOS  *****************************/
+
+#servicios__main {
+ 
+  .container-fluid {
+
+    .card-text{
+      @include text(center, 1.6rem, 500);
+    }
+
+    .card__img {
+      height: 250px;
+      padding: 20px;
+    }
+  }
+}
+
+/****************************** DISEÑOS INDEX *****************************/
+
+#diseños {
+  .slide__mobile {
+    text-align: center;
+    margin-top: 10px;
+
+    img {
+      margin: 6px;
+    }
+  }
+}
+
+/****************************** PAGINA DISEÑOS *****************************/
+
+#diseñosContent {
+  .overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.7s ease;
+    visibility: hidden;
+    opacity: 0;
+
+    .slideshow {
+      width: 90%;
+      height: 90%;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #000;
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      .btn_cerrar {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        font-size: map-get($map: $font-size, $key: 'tresymedio');
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        transition: all 0.2s ease;
+
+        &:hover {
+          transform: scale(1.2);
+          cursor: pointer;
+        }
+      }
+
+      .botones {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: map-get($map: $font-size, $key: 'siete');
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: rgb(240, 106, 45);
+
+        &:hover > i {
+          transform: scale(1.1);
+          transition: all 0.2s ease;
+        }
+
+        .mdi {
+          pointer-events: none;
+        }
+      }
+
+      .adelante {
+        right: 20px;
+      }
+
+      .atras {
+        left: 20px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+}
+
+.columna {
+  flex: 20%;
+  max-width: 20%;
+  padding: 0 4px;
+
+  img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    transition: all 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      filter: grayscale(0%);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .columna {
+    flex: 25%;
+    max-width: 25%;
+  }
+
+  .botones {
+    font-size: map-get($map: $font-size, $key: 'cincoymedio');
+  }
+
+  .atras {
+    left: 5px;
+  }
+
+  .adelante {
+    right: 5px;
+  }
+
+  .slideshow img {
+    width: 98%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .columna {
+    flex: 33%;
+    max-width: 33%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .columna {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .columna {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/****************************** PAGINA ALQUILERES *****************************/
+
+#alquileres {
+  .card-text {
+    @include text(center, 1.7rem, 400);
+  }
+}
+
+#tabla {
+  width: 80%;
+  margin: auto auto 14px auto;
+
+  th {
+    font-size: map-get($map: $font-size, $key: 'dos');
+  }
+
+  td {
+    font-size: map-get($map: $font-size, $key: 'unoymedio');
+  }
+}
+
+/****************************** SLIDER *****************************/
 .hi-slide {
   position: relative;
   width: 754px;
@@ -31,7 +282,7 @@
   background-color: white;
   color: black;
   transition: all 0.7s;
-  font-size: 20px;
+  font-size: map-get($map: $font-size, $key: 'dos');
   font-weight: bold;
 }
 
@@ -45,16 +296,8 @@
   left: -70px;
 }
 
-.hi-slide .hi-prev::before {
-  content: "<";
-}
-
 .hi-slide .hi-next {
   right: -70px;
-}
-
-.hi-slide .hi-next::before {
-  content: ">";
 }
 
 .hi-slide > ul {
@@ -87,3 +330,9 @@
   height: 100%;
   background-position: center;
 }
+
+.mdi2{
+  font-size: map-get($map: $font-size, $key: 'cinco');
+  color: $terciaryColor;
+}
+/***********************************************************/
