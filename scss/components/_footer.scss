@@ -1,0 +1,33 @@
+#contacto {
+    border-top: 2px $primaryColor solid;
+    background-color: $terciaryColor;
+    align-items: center;
+    padding: 20px;
+    .contacto__title {
+      @include text(center, 1.8rem, 600);
+      color: $primaryColor;
+      margin: 2px;
+    }
+  
+    .contacto__menu {
+      display: flex;
+      justify-content: center;
+      margin-right: 25px;
+  
+      .contacto__list {
+        list-style-type: none;
+        padding: 0 8px;
+  
+        .contacto__link {
+          font-size: 2rem;
+          color: $primaryColor;
+        }
+      }
+      .contacto__num {
+        color: $primaryColor;
+        list-style-type: none;
+        font-size: 2rem;
+      }
+    }
+  }
+  

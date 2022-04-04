@@ -1,0 +1,90 @@
+$primaryColor: black;
+$secondaryColor: white;
+$terciaryColor: salmon;
+
+$fontFamily: "Roboto", "Ubuntu", sans-serif;
+
+/**********************EXTENDS************************/
+
+.diseño__main-btn {
+    text-align: center;
+
+    .diseño__btn {
+        @extend .main__btn;
+        margin: 30px auto;
+    }
+}
+
+.servicio__main-btn {
+    text-align: center;
+    .servicio__btn {
+        @extend .main__btn;
+        margin-bottom: 80px;
+    }
+}
+
+.servicios__title {
+    @extend .title;
+    margin-bottom: 40px;
+}
+
+.diseños__title {
+    @extend .title;
+    margin: 20px auto;
+}
+
+.turnos__title {
+    @extend .title;
+    margin: 0;
+}
+
+/**********************MIXINS************************/
+
+@mixin text($text-align, $font-size, $font-weight){
+    text-align: $text-align;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+.servicios__text {
+    @include text(center, 2rem, 600);
+    margin: -30px 20px 0 20px;
+
+    &:hover {
+        color: $secondaryColor;
+        background-color: $primaryColor;
+    }
+}
+
+.card__title {
+    @include text(center, 2.8rem, 700);
+    text-decoration: underline 2px;
+    margin-bottom: 15px;
+}
+
+/**********************MAP, APLICADO EN MAIN.SCSS************************/
+
+$font-size: (
+    'medio':5px,
+    'uno': 10px,
+    'unoymedio': 15px,
+    'dos': 20px,
+    'dosymedio': 25px,
+    'tres': 30px,
+    'tresymedio': 35px,
+    'cuatro': 40px,
+    'cuatroymedio': 45px,
+    'cinco': 50px,
+    'cincoymedio': 55px,
+    'seis': 60px,
+    'seisymedio': 65px,
+    'siete': 70px,
+    'sieteymedio': 75px,
+    'ocho': 80px,
+    'ochoymedio': 85px,
+    'nueve': 90px,
+    'nueveymedio': 95px,
+    'cien': 100px
+);
+
+
