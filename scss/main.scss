@@ -54,6 +54,10 @@
  
   .container-fluid {
 
+    .card{
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
     .card-text{
       @include text(center, 1.6rem, 500);
     }
@@ -242,6 +246,11 @@
 /****************************** PAGINA ALQUILERES *****************************/
 
 #alquileres {
+
+  .card{
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
   .card-text {
     @include text(center, 1.7rem, 400);
   }
@@ -257,6 +266,89 @@
 
   td {
     font-size: map-get($map: $font-size, $key: 'unoymedio');
+  }
+}
+
+/****************************** PAGINA CONTACTO *****************************/
+
+.contacto__hero {
+  background: url(/img/fondo1.jpg) no-repeat center center fixed;
+  background-size: cover;
+
+  .contacto2{
+    display: grid;
+    margin: 0 10px;
+
+    .fieldset{
+      background-color: rgb(221, 200, 204);
+      padding: 20px;
+      display: grid;
+      font-size: 2rem;
+      margin-top: 40px;
+      margin-bottom: 30px;
+
+      .legend{
+        font-family: 'Dancing Script', cursive;
+        text-decoration: underline 1px;
+        font-size: 4rem;
+        font-weight: 600;
+      }
+
+      #servicio{
+        font-size: 1.4rem;
+      }
+
+      input{
+        font-size: 1.4rem;
+      }
+
+      .h2{
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      label{
+        font-family: 'EB Garamond', serif;
+      }
+
+      .title__equipo{
+        font-family: 'Dancing Script', cursive;
+        text-decoration: underline 1px;
+        font-size: 4rem;
+        font-weight: 600;
+      }
+    }
+    .btn-contact{
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 2rem;
+
+      .container-input{
+        text-align: center;
+      }
+
+      .btn-bg{
+        font-family: 'EB Garamond', serif;
+        background-color: transparent;
+        width: 100px;
+        height: 50px;
+        border: solid $primaryColor 2px;
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+        &:hover {
+          color: $secondaryColor;
+          background: $primaryColor;
+          transition: 0.6s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .google{
+    text-align: center;
   }
 }
 

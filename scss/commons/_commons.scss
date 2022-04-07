@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=EB+Garamond:ital,wght@1,400;1,500&display=swap');
+
 $primaryColor: black;
 $secondaryColor: white;
 $terciaryColor: salmon;
@@ -49,11 +51,6 @@ $fontFamily: "Roboto", "Ubuntu", sans-serif;
 .servicios__text {
     @include text(center, 2rem, 600);
     margin: -30px 20px 0 20px;
-
-    &:hover {
-        color: $secondaryColor;
-        background-color: $primaryColor;
-    }
 }
 
 .card__title {
