@@ -31,6 +31,12 @@
     }
   }
 
+  .btn-contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+  }
+
   .main__container {
     margin: 18vh auto auto auto;
   }
@@ -64,6 +70,32 @@
 }
 
 @media (min-width: 1024px) {
+
+  .contacto2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fieldset{
+    margin: 20px;
+    margin-top: 0;
+  }
+
+  .btn-contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .servicios__text {
+    @include text(center, 2rem, 600);
+    margin: -30px 20px 0 20px;
+
+    &:hover {
+        color: $secondaryColor;
+        background-color: $primaryColor;
+    }
+  }
+
   .navbar__btn {
     display: none;
   }
@@ -75,6 +107,11 @@
 }
 
 @media (min-width: 1440px) {
+
+  #subject{
+    width: 400px;
+  }
+
   .servicios__grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
