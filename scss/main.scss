@@ -7,13 +7,30 @@
 @import "./components/title";
 @import "./screens/screens";
 
+.animado{
+  opacity: 0;
+  transition: all 0.5s;
+}
 
+.mostrarArriba{
+  animation: mostrarArriba 1s;
+}
+
+@keyframes  mostrarArriba{
+  0% {
+    transform: translateY(60px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 /****************************** SERVICIOS INDEX *****************************/
-
 #servicios {
+
   .servicios__grid {
     margin-bottom: 55px;
-
+  
     .servicios__grid--container {
       .servicios__imgs {
         clip-path: circle(40% at 50% 40%);
@@ -72,6 +89,7 @@
 /****************************** DISEÑOS INDEX *****************************/
 
 #diseños {
+
   .slide__mobile {
     text-align: center;
     margin-top: 10px;
@@ -281,6 +299,7 @@
 
     .fieldset{
       background-color: rgb(221, 200, 204);
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       padding: 20px;
       display: grid;
       font-size: 2rem;
