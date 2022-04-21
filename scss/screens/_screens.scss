@@ -1,3 +1,14 @@
+@media (max-width: 500px) {
+  .servicios__grid {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+}
+
 @media (min-width: 500px) {
   .servicios__grid {
     display: grid;
