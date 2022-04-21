@@ -289,6 +289,22 @@
   background: url(/img/fondo1.jpg) no-repeat center center fixed;
   background-size: cover;
 
+  #subject::-webkit-input-placeholder {
+    padding: 10px;
+  }
+
+  #subject::-moz-input-placeholder {
+    padding: 10px;
+  }
+
+  #subject:-moz-input-placeholder {
+    padding: 10px;
+  }
+
+  #subject:-ms-input-placeholder {
+    padding: 10px;
+  }
+
   .contacto2 {
     display: grid;
     margin: 0 10px;

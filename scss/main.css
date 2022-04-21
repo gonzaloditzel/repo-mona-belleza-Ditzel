@@ -582,6 +582,18 @@ html {
   background: url(/img/fondo1.jpg) no-repeat center center fixed;
   background-size: cover;
 }
+.contacto__hero #subject::-webkit-input-placeholder {
+  padding: 10px;
+}
+.contacto__hero #subject::-moz-input-placeholder {
+  padding: 10px;
+}
+.contacto__hero #subject:-moz-input-placeholder {
+  padding: 10px;
+}
+.contacto__hero #subject:-ms-input-placeholder {
+  padding: 10px;
+}
 .contacto__hero .contacto2 {
   display: grid;
   margin: 0 10px;
