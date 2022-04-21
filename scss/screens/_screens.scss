@@ -17,12 +17,13 @@
       width: 0;
     }
   }
+
   .slide__mobile {
     display: flex;
     text-align: center;
     overflow-x: auto;
     padding-bottom: 0.25rem;
-    margin: 0 20px;
+    margin: 60px 20px 0 20px;
     &::-webkit-scrollbar {
       width: 0;
     }
@@ -33,6 +34,10 @@
   .servicios__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .slide__mobile {
+    margin: 0 0px;
   }
 }
 

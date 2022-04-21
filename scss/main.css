@@ -4,6 +4,7 @@
 .diseño__main-btn {
   text-align: center;
 }
+
 .diseño__main-btn .diseño__btn {
   margin: 30px auto;
 }
@@ -11,6 +12,7 @@
 .servicio__main-btn {
   text-align: center;
 }
+
 .servicio__main-btn .servicio__btn {
   margin-bottom: 80px;
 }
@@ -54,7 +56,8 @@ html {
   font-family: "Roboto", "Ubuntu", sans-serif;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #hero {
@@ -68,6 +71,7 @@ html {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
 }
+
 @-webkit-keyframes animationHero {
   0% {
     width: 0vw;
@@ -76,6 +80,7 @@ html {
     width: 100vw;
   }
 }
+
 @keyframes animationHero {
   0% {
     width: 0vw;
@@ -84,6 +89,7 @@ html {
     width: 100vw;
   }
 }
+
 #hero .main__container {
   position: absolute;
   left: 0;
@@ -92,12 +98,15 @@ html {
   text-align: center;
   width: 280px;
 }
+
 #hero .main__container .main__title {
   background-color: black;
   color: white;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+  padding: 10px;
   margin-bottom: 15px;
 }
+
 #hero .main__container .main__text {
   text-align: center;
   font-size: 1.5rem;
@@ -111,9 +120,11 @@ html {
   top: 0;
   z-index: 2000;
 }
+
 #navbar .navbar {
   border-bottom: solid black 2px;
 }
+
 #navbar .navbar .navbar__link {
   text-align: center;
   font-size: 1.8rem;
@@ -122,15 +133,19 @@ html {
   color: black;
   padding: 5px 15px;
 }
+
 #navbar .navbar .navbar__link:hover {
   color: white;
   background-color: black;
+  -webkit-transition: 0.8s;
   transition: 0.8s;
 }
+
 #navbar .navbar .navbar__list--contacto {
   list-style-type: none;
   padding: 0 8px;
 }
+
 #navbar .navbar .navbar__list--contacto .navbar__link--contacto {
   font-size: 2rem;
   color: black;
@@ -140,9 +155,12 @@ html {
 #contacto {
   border-top: 2px black solid;
   background-color: salmon;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 20px;
 }
+
 #contacto .contacto__title {
   text-align: center;
   font-size: 1.8rem;
@@ -150,19 +168,27 @@ html {
   color: black;
   margin: 2px;
 }
+
 #contacto .contacto__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-right: 25px;
 }
+
 #contacto .contacto__menu .contacto__list {
   list-style-type: none;
   padding: 0 8px;
 }
+
 #contacto .contacto__menu .contacto__list .contacto__link {
   font-size: 2rem;
   color: black;
 }
+
 #contacto .contacto__menu .contacto__num {
   color: black;
   list-style-type: none;
@@ -178,9 +204,11 @@ html {
   font-weight: 700;
   cursor: pointer;
 }
+
 .main__btn:hover, .diseño__main-btn .diseño__btn:hover, .servicio__main-btn .servicio__btn:hover {
   color: white;
   background: black;
+  -webkit-transition: 0.6s ease-in-out;
   transition: 0.6s ease-in-out;
 }
 
@@ -196,13 +224,15 @@ html {
   .slide {
     display: none;
   }
-
   .slide__mobile {
     margin: 0 80px;
   }
 }
+
 @media (max-width: 500px) {
   .servicios__grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     overflow-x: auto;
     padding-bottom: 0.25rem;
@@ -210,29 +240,41 @@ html {
   .servicios__grid::-webkit-scrollbar {
     width: 0;
   }
-
   .slide__mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     text-align: center;
     overflow-x: auto;
     padding-bottom: 0.25rem;
-    margin: 0 20px;
+    margin: 60px 20px 0 20px;
   }
   .slide__mobile::-webkit-scrollbar {
     width: 0;
   }
 }
+
 @media (min-width: 500px) {
   .servicios__grid {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .slide__mobile {
+    margin: 0 0px;
   }
 }
+
 @media (min-width: 768px) {
   #contacto {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     width: 100%;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #contacto .contacto__title {
     font-size: 2.5rem;
@@ -241,17 +283,16 @@ html {
   #contacto .contacto__menu {
     margin-top: 10px;
   }
-
   .btn-contact {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     text-align: center;
   }
-
   .main__container {
     margin: 18vh auto auto auto;
   }
-
   #hero {
     background: url(/img/fondo1.jpg) no-repeat center center fixed;
     background-size: cover;
@@ -259,47 +300,52 @@ html {
     -webkit-animation-name: animationHero;
             animation-name: animationHero;
   }
-
   .slide__mobile {
     display: none;
   }
-
   .slide {
     display: block;
   }
-
   .contacto {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
   }
-
   .servicios__grid {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
-
   .card__servicios {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (min-width: 1024px) {
   .contacto2 {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
-
   .fieldset {
     margin: 20px;
     margin-top: 0;
   }
-
   .btn-contact {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
-
   .servicios__text {
     text-align: center;
     font-size: 2rem;
@@ -310,32 +356,37 @@ html {
     color: white;
     background-color: black;
   }
-
   .navbar__btn {
     display: none;
   }
-
   .card__servicios {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
   }
 }
+
 @media (min-width: 1440px) {
   #subject {
     width: 400px;
   }
-
   .servicios__grid {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
   }
-
   .navbar__menu {
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
+
 .animado {
   opacity: 0;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -346,25 +397,31 @@ html {
 
 @-webkit-keyframes mostrarArriba {
   0% {
-    transform: translateY(60px);
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
   }
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 @keyframes mostrarArriba {
   0% {
-    transform: translateY(60px);
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
   }
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
+
 /****************************** SERVICIOS INDEX *****************************/
 #servicios .servicios__grid {
   margin-bottom: 55px;
 }
+
 #servicios .servicios__grid .servicios__grid--container .servicios__imgs {
   -webkit-clip-path: circle(40% at 50% 40%);
           clip-path: circle(40% at 50% 40%);
@@ -374,20 +431,24 @@ html {
   cursor: pointer;
   margin: auto;
 }
+
 #servicios .servicios__grid .servicios__grid--container .servicios__imgs:hover > .servicios__img-bg {
   opacity: 1;
   visibility: visible;
 }
+
 #servicios .servicios__grid .servicios__grid--container .servicios__imgs .servicios__img-bg {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(11, 183, 123, 0.6);
+  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   opacity: 0;
   visibility: hidden;
 }
+
 #servicios .servicios__grid .servicios__grid--container .servicios__imgs .servicios__img-bg .servicios__text-bg {
   text-align: center;
   font-size: 2rem;
@@ -397,22 +458,30 @@ html {
 
 /****************************** PAGINA SERVICIOS  *****************************/
 #servicios__main .container-fluid .card {
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 #servicios__main .container-fluid .card-text {
   text-align: center;
   font-size: 1.6rem;
   font-weight: 500;
 }
+
 #servicios__main .container-fluid .card__img {
   height: 250px;
   padding: 20px;
 }
 
 /****************************** DISEÑOS INDEX *****************************/
+#diseños {
+  height: 68vh;
+}
+
 #diseños .slide__mobile {
   text-align: center;
 }
+
 #diseños .slide__mobile img {
   margin: 6px;
 }
@@ -426,22 +495,35 @@ html {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   visibility: hidden;
   opacity: 0;
 }
+
 #diseñosContent .overlay .slideshow {
   width: 90%;
   height: 90%;
   background-color: rgba(255, 255, 255, 0.9);
   color: #000;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 #diseñosContent .overlay .slideshow .btn_cerrar {
   position: absolute;
   top: -15px;
@@ -452,118 +534,164 @@ html {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
+
 #diseñosContent .overlay .slideshow .btn_cerrar:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   cursor: pointer;
 }
+
 #diseñosContent .overlay .slideshow .botones {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 70px;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   cursor: pointer;
-  color: rgb(240, 106, 45);
+  color: #f06a2d;
 }
+
 #diseñosContent .overlay .slideshow .botones:hover > i {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
+
 #diseñosContent .overlay .slideshow .botones .mdi {
   pointer-events: none;
 }
+
 #diseñosContent .overlay .slideshow .adelante {
   right: 20px;
 }
+
 #diseñosContent .overlay .slideshow .atras {
   left: 20px;
 }
+
 #diseñosContent .overlay .slideshow img {
   height: 100%;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
+
 #diseñosContent .galeria {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 10px 20px;
 }
 
 .columna {
-  flex: 20%;
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
   max-width: 20%;
   padding: 0 4px;
 }
+
 .columna img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
 .columna img:hover {
   cursor: pointer;
-  filter: grayscale(0%);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transform: scale(1.1);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media screen and (max-width: 1400px) {
   .columna {
-    flex: 25%;
+    -webkit-box-flex: 25%;
+        -ms-flex: 25%;
+            flex: 25%;
     max-width: 25%;
   }
-
   .botones {
     font-size: 55px;
   }
-
   .atras {
     left: 5px;
   }
-
   .adelante {
     right: 5px;
   }
-
   .slideshow img {
     width: 98%;
   }
 }
+
 @media screen and (max-width: 1200px) {
   .columna {
-    flex: 33%;
+    -webkit-box-flex: 33%;
+        -ms-flex: 33%;
+            flex: 33%;
     max-width: 33%;
   }
 }
+
 @media screen and (max-width: 900px) {
   .columna {
-    flex: 50%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
     max-width: 50%;
   }
 }
+
 @media screen and (max-width: 600px) {
   .columna {
-    flex: 100%;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     max-width: 100%;
   }
 }
+
 /****************************** PAGINA ALQUILERES *****************************/
 #alquileres .card {
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 #alquileres .card-text {
   text-align: center;
   font-size: 1.7rem;
@@ -574,9 +702,11 @@ html {
   width: 80%;
   margin: auto auto 14px auto;
 }
+
 #tabla th {
   font-size: 20px;
 }
+
 #tabla td {
   font-size: 15px;
 }
@@ -586,31 +716,41 @@ html {
   background: url(/img/fondo1.jpg) no-repeat center center fixed;
   background-size: cover;
 }
+
 .contacto__hero #subject::-webkit-input-placeholder {
   padding: 10px;
 }
+
 .contacto__hero #subject::-moz-input-placeholder {
   padding: 10px;
 }
+
 .contacto__hero #subject:-moz-input-placeholder {
   padding: 10px;
 }
+
 .contacto__hero #subject:-ms-input-placeholder {
   padding: 10px;
 }
+
 .contacto__hero .contacto2 {
+  display: -ms-grid;
   display: grid;
   margin: 0 10px;
 }
+
 .contacto__hero .contacto2 .fieldset {
-  background-color: rgb(221, 200, 204);
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #ddc8cc;
+  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 20px;
+  display: -ms-grid;
   display: grid;
   font-size: 2rem;
   margin-top: 40px;
   margin-bottom: 30px;
 }
+
 .contacto__hero .contacto2 .fieldset .legend {
   font-family: "Dancing Script", cursive;
   -webkit-text-decoration: underline 1px;
@@ -618,19 +758,24 @@ html {
   font-size: 4rem;
   font-weight: 600;
 }
+
 .contacto__hero .contacto2 .fieldset #servicio {
   font-size: 1.4rem;
 }
+
 .contacto__hero .contacto2 .fieldset input {
   font-size: 1.4rem;
 }
+
 .contacto__hero .contacto2 .fieldset .h2 {
   text-align: center;
   font-size: 2rem;
 }
+
 .contacto__hero .contacto2 .fieldset label {
   font-family: "EB Garamond", serif;
 }
+
 .contacto__hero .contacto2 .fieldset .title__equipo {
   font-family: "Dancing Script", cursive;
   -webkit-text-decoration: underline 1px;
@@ -638,14 +783,17 @@ html {
   font-size: 4rem;
   font-weight: 600;
 }
+
 .contacto__hero .contacto2 .btn-contact {
   margin-top: 40px;
   margin-bottom: 20px;
   font-size: 2rem;
 }
+
 .contacto__hero .contacto2 .btn-contact .container-input {
   text-align: center;
 }
+
 .contacto__hero .contacto2 .btn-contact .btn-bg {
   font-family: "EB Garamond", serif;
   background-color: transparent;
@@ -657,11 +805,14 @@ html {
   margin-bottom: 20px;
   cursor: pointer;
 }
+
 .contacto__hero .contacto2 .btn-contact .btn-bg:hover {
   color: white;
   background: black;
+  -webkit-transition: 0.6s ease-in-out;
   transition: 0.6s ease-in-out;
 }
+
 .contacto__hero .google {
   text-align: center;
 }
@@ -687,6 +838,7 @@ html {
   cursor: pointer;
   background-color: white;
   color: black;
+  -webkit-transition: all 0.7s;
   transition: all 0.7s;
   font-size: 20px;
   font-weight: bold;
@@ -742,4 +894,5 @@ html {
   color: salmon;
 }
 
-/***********************************************************//*# sourceMappingURL=main.css.map */
+/***********************************************************/
+/*# sourceMappingURL=main.css.map */
