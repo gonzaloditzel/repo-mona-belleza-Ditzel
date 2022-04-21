@@ -7,7 +7,7 @@
 @import "./components/title";
 @import "./screens/screens";
 
-.animado{
+.animado {
   opacity: 0;
   transition: all 0.5s;
 }
@@ -24,11 +24,11 @@
 //   height: 100vh;
 // }
 
-.mostrarArriba{
+.mostrarArriba {
   animation: mostrarArriba 1s;
 }
 
-@keyframes  mostrarArriba{
+@keyframes mostrarArriba {
   0% {
     transform: translateY(60px);
   }
@@ -39,10 +39,9 @@
 }
 /****************************** SERVICIOS INDEX *****************************/
 #servicios {
-
   .servicios__grid {
     margin-bottom: 55px;
-  
+
     .servicios__grid--container {
       .servicios__imgs {
         clip-path: circle(40% at 50% 40%);
@@ -80,14 +79,13 @@
 /****************************** PAGINA SERVICIOS  *****************************/
 
 #servicios__main {
- 
   .container-fluid {
-
-    .card{
-      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .card {
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
-    .card-text{
+    .card-text {
       @include text(center, 1.6rem, 500);
     }
 
@@ -101,7 +99,6 @@
 /****************************** DISEÑOS INDEX *****************************/
 
 #diseños {
-
   .slide__mobile {
     text-align: center;
 
@@ -142,7 +139,7 @@
         position: absolute;
         top: -15px;
         right: -15px;
-        font-size: map-get($map: $font-size, $key: 'tresymedio');
+        font-size: map-get($map: $font-size, $key: "tresymedio");
         background-color: rgba(0, 0, 0, 0.7);
         color: #fff;
         width: 30px;
@@ -168,7 +165,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: map-get($map: $font-size, $key: 'siete');
+        font-size: map-get($map: $font-size, $key: "siete");
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -235,7 +232,7 @@
   }
 
   .botones {
-    font-size: map-get($map: $font-size, $key: 'cincoymedio');
+    font-size: map-get($map: $font-size, $key: "cincoymedio");
   }
 
   .atras {
@@ -275,9 +272,9 @@
 /****************************** PAGINA ALQUILERES *****************************/
 
 #alquileres {
-
-  .card{
-    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  .card {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   .card-text {
@@ -290,11 +287,11 @@
   margin: auto auto 14px auto;
 
   th {
-    font-size: map-get($map: $font-size, $key: 'dos');
+    font-size: map-get($map: $font-size, $key: "dos");
   }
 
   td {
-    font-size: map-get($map: $font-size, $key: 'unoymedio');
+    font-size: map-get($map: $font-size, $key: "unoymedio");
   }
 }
 
@@ -304,61 +301,62 @@
   background: url(/img/fondo1.jpg) no-repeat center center fixed;
   background-size: cover;
 
-  .contacto2{
+  .contacto2 {
     display: grid;
     margin: 0 10px;
 
-    .fieldset{
+    .fieldset {
       background-color: rgb(221, 200, 204);
-      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
       padding: 20px;
       display: grid;
       font-size: 2rem;
       margin-top: 40px;
       margin-bottom: 30px;
 
-      .legend{
-        font-family: 'Dancing Script', cursive;
+      .legend {
+        font-family: "Dancing Script", cursive;
         text-decoration: underline 1px;
         font-size: 4rem;
         font-weight: 600;
       }
 
-      #servicio{
+      #servicio {
         font-size: 1.4rem;
       }
 
-      input{
+      input {
         font-size: 1.4rem;
       }
 
-      .h2{
+      .h2 {
         text-align: center;
         font-size: 2rem;
       }
 
-      label{
-        font-family: 'EB Garamond', serif;
+      label {
+        font-family: "EB Garamond", serif;
       }
 
-      .title__equipo{
-        font-family: 'Dancing Script', cursive;
+      .title__equipo {
+        font-family: "Dancing Script", cursive;
         text-decoration: underline 1px;
         font-size: 4rem;
         font-weight: 600;
       }
     }
-    .btn-contact{
+    .btn-contact {
       margin-top: 40px;
       margin-bottom: 20px;
       font-size: 2rem;
 
-      .container-input{
+      .container-input {
         text-align: center;
       }
 
-      .btn-bg{
-        font-family: 'EB Garamond', serif;
+      .btn-bg {
+        font-family: "EB Garamond", serif;
         background-color: transparent;
         width: 100px;
         height: 50px;
@@ -377,7 +375,7 @@
     }
   }
 
-  .google{
+  .google {
     text-align: center;
   }
 }
@@ -404,7 +402,7 @@
   background-color: white;
   color: black;
   transition: all 0.7s;
-  font-size: map-get($map: $font-size, $key: 'dos');
+  font-size: map-get($map: $font-size, $key: "dos");
   font-weight: bold;
 }
 
@@ -453,8 +451,8 @@
   background-position: center;
 }
 
-.mdi2{
-  font-size: map-get($map: $font-size, $key: 'cinco');
+.mdi2 {
+  font-size: map-get($map: $font-size, $key: "cinco");
   color: $terciaryColor;
 }
 /***********************************************************/

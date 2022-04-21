@@ -193,6 +193,15 @@ html {
   color: white;
 }
 
+@media (max-width: 767px) {
+  .slide {
+    display: none;
+  }
+
+  .slide__mobile {
+    margin: 0 80px;
+  }
+}
 @media (max-width: 500px) {
   .servicios__grid {
     display: flex;
@@ -202,20 +211,22 @@ html {
   .servicios__grid::-webkit-scrollbar {
     width: 0;
   }
+
+  .slide__mobile {
+    display: flex;
+    text-align: center;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    margin: 0 20px;
+  }
+  .slide__mobile::-webkit-scrollbar {
+    width: 0;
+  }
 }
 @media (min-width: 500px) {
   .servicios__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 767px) {
-  .slide {
-    display: none;
-  }
-
-  .slide__mobile {
-    margin: 0 80px;
   }
 }
 @media (min-width: 768px) {
