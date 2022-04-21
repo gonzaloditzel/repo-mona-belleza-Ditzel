@@ -192,7 +192,7 @@ html {
   color: white;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .slide {
     display: none;
   }
@@ -262,6 +262,10 @@ html {
 
   .slide__mobile {
     display: none;
+  }
+
+  .slide {
+    display: block;
   }
 
   .contacto {

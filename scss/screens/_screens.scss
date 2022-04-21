@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .slide {
     display: none;
   }
@@ -71,6 +71,10 @@
 
   .slide__mobile {
     display: none;
+  }
+
+  .slide {
+    display: block;
   }
 
   .contacto {
