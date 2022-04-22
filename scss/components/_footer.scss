@@ -16,14 +16,14 @@
   
       .contacto__list {
         list-style-type: none;
-        padding: 0 8px;
+        padding: 0 10px;
   
         .contacto__link {
           font-size: 2rem;
           color: $primaryColor;
         }
       }
-      .contacto__num {
+      .contacto__name {
         color: $primaryColor;
         list-style-type: none;
         font-size: 2rem;

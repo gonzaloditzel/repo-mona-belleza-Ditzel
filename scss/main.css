@@ -181,7 +181,7 @@ html {
 
 #contacto .contacto__menu .contacto__list {
   list-style-type: none;
-  padding: 0 8px;
+  padding: 0 10px;
 }
 
 #contacto .contacto__menu .contacto__list .contacto__link {
@@ -189,7 +189,7 @@ html {
   color: black;
 }
 
-#contacto .contacto__menu .contacto__num {
+#contacto .contacto__menu .contacto__name {
   color: black;
   list-style-type: none;
   font-size: 2rem;
@@ -218,6 +218,22 @@ html {
   padding: 6px;
   background-color: black;
   color: white;
+}
+
+@media (max-width: 900px) {
+  .row-desktop {
+    display: none;
+  }
+  .scroll {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+  }
+  .scroll::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -329,7 +345,29 @@ html {
   }
 }
 
+@media (min-width: 900px) {
+  .row-mobile {
+    display: none;
+  }
+  .row-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 @media (min-width: 1024px) {
+  #hero .main__container {
+    width: 550px;
+  }
+  #hero .main__container .main__title {
+    font-size: 4rem;
+  }
+  #hero .main__container .main__text {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+  }
   .contacto2 {
     display: -ms-grid;
     display: grid;
@@ -428,7 +466,6 @@ html {
   width: 200px;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
   margin: auto;
 }
 
@@ -880,7 +917,6 @@ html {
   padding: 0;
   border: 3px solid white;
   background-color: #333;
-  cursor: pointer;
 }
 
 .hi-slide > ul > li > img {
