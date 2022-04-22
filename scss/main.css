@@ -613,10 +613,10 @@ html {
 }
 
 .columna {
-  -webkit-box-flex: 20%;
-      -ms-flex: 20%;
-          flex: 20%;
-  max-width: 20%;
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+  max-width: 25%;
   padding: 0 4px;
 }
 
@@ -661,10 +661,10 @@ html {
 
 @media screen and (max-width: 1200px) {
   .columna {
-    -webkit-box-flex: 33%;
-        -ms-flex: 33%;
-            flex: 33%;
-    max-width: 33%;
+    -webkit-box-flex: 25%;
+        -ms-flex: 25%;
+            flex: 25%;
+    max-width: 25%;
   }
 }
 
@@ -678,11 +678,15 @@ html {
 }
 
 @media screen and (max-width: 600px) {
+  img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
   .columna {
-    -webkit-box-flex: 100%;
-        -ms-flex: 100%;
-            flex: 100%;
-    max-width: 100%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    max-width: 50%;
   }
 }
 

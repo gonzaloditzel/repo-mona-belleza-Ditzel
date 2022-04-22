@@ -195,8 +195,8 @@
 }
 
 .columna {
-  flex: 20%;
-  max-width: 20%;
+  flex: 25%;
+  max-width: 25%;
   padding: 0 4px;
 
   img {
@@ -239,8 +239,8 @@
 
 @media screen and (max-width: 1200px) {
   .columna {
-    flex: 33%;
-    max-width: 33%;
+    flex: 25%;
+    max-width: 25%;
   }
 }
 
@@ -252,9 +252,13 @@
 }
 
 @media screen and (max-width: 600px) {
+  img{
+    object-fit: contain;
+  }
+  
   .columna {
-    flex: 100%;
-    max-width: 100%;
+    flex: 50%;
+    max-width: 50%;
   }
 }
 
