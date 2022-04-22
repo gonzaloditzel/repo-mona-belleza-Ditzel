@@ -36,7 +36,6 @@
         width: 200px;
         position: relative;
         overflow: hidden;
-        cursor: pointer;
         margin: auto;
 
         &:hover > .servicios__img-bg {
@@ -447,7 +446,6 @@
   padding: 0;
   border: 3px solid white;
   background-color: #333;
-  cursor: pointer;
 }
 
 .hi-slide > ul > li > img {

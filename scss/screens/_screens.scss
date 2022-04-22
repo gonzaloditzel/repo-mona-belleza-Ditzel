@@ -1,3 +1,18 @@
+@media (max-width: 900px) {
+  .row-desktop{
+    display: none;
+  }
+
+  .scroll {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .slide {
     display: none;
@@ -99,7 +114,31 @@
   }
 }
 
+@media (min-width: 900px) {
+  .row-mobile{
+    display: none;
+  }
+  .row-desktop{
+    display: flex;
+  }
+}
+
 @media (min-width: 1024px) {
+
+  #hero {
+    .main__container {
+      width: 550px;
+  
+      .main__title {
+        font-size: 4rem;
+      }
+  
+      .main__text {
+        @include text(center, 2rem, 600);
+      }
+    }
+  }
+
   .contacto2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
