@@ -246,6 +246,15 @@ html {
 }
 
 @media (max-width: 500px) {
+  #diseñosContent .botones {
+    font-size: 30px;
+  }
+  #diseñosContent .adelante {
+    right: -15px;
+  }
+  #diseñosContent .atras {
+    left: -15px;
+  }
   .servicios__grid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -283,6 +292,19 @@ html {
 }
 
 @media (min-width: 768px) {
+  #diseñosContent .botones {
+    font-size: 70px;
+  }
+  #diseñosContent .adelante {
+    right: 20px;
+  }
+  #diseñosContent .atras {
+    left: 20px;
+  }
+  #tabla {
+    width: 80%;
+    margin: auto;
+  }
   #contacto {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -605,13 +627,12 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 70px;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   cursor: pointer;
-  color: #f06a2d;
+  color: black;
 }
 
 #diseñosContent .overlay .slideshow .botones:hover > i {
@@ -623,14 +644,6 @@ html {
 
 #diseñosContent .overlay .slideshow .botones .mdi {
   pointer-events: none;
-}
-
-#diseñosContent .overlay .slideshow .adelante {
-  right: 20px;
-}
-
-#diseñosContent .overlay .slideshow .atras {
-  left: 20px;
 }
 
 #diseñosContent .overlay .slideshow img {
@@ -733,11 +746,6 @@ html {
   text-align: center;
   font-size: 1.7rem;
   font-weight: 400;
-}
-
-#tabla {
-  width: 80%;
-  margin: auto auto 14px auto;
 }
 
 #tabla th {

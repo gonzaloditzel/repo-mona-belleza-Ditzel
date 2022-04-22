@@ -153,12 +153,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: map-get($map: $font-size, $key: "siete");
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
-        color: rgb(240, 106, 45);
+        color: $primaryColor;
 
         &:hover > i {
           transform: scale(1.1);
@@ -168,14 +167,6 @@
         .mdi {
           pointer-events: none;
         }
-      }
-
-      .adelante {
-        right: 20px;
-      }
-
-      .atras {
-        left: 20px;
       }
 
       img {
@@ -271,9 +262,6 @@
 }
 
 #tabla {
-  width: 80%;
-  margin: auto auto 14px auto;
-
   th {
     font-size: map-get($map: $font-size, $key: "dos");
   }

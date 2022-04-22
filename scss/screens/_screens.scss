@@ -24,6 +24,20 @@
 }
 
 @media (max-width: 500px) {
+  #diseñosContent{
+
+    .botones {
+      font-size: map-get($map: $font-size, $key: "tres");
+    }
+    
+    .adelante {
+      right: -15px;
+    }
+    
+    .atras {
+      left: -15px;
+    }
+  }
   .servicios__grid {
     display: flex;
     overflow-x: auto;
@@ -57,6 +71,25 @@
 }
 
 @media (min-width: 768px) {
+  #diseñosContent{
+    .botones {
+      font-size: map-get($map: $font-size, $key: "siete");
+    }
+    
+    .adelante {
+      right: 20px;
+    }
+    
+    .atras {
+      left: 20px;
+    }
+  }
+
+  #tabla{
+    width: 80%;
+    margin: auto;
+  }
+  
   #contacto {
     display: inline-flex;
     width: 100%;
