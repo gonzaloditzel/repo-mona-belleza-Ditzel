@@ -1,10 +1,11 @@
 #contacto {
     border-top: 2px $primaryColor solid;
-    background-color: $terciaryColor;
+    background-color: pink;
     align-items: center;
     padding: 20px;
     .contacto__title {
-      @include text(center, 1.8rem, 600);
+      @include text(center, 2.6rem, 760);
+      font-family: "Dancing Script", cursive;
       color: $primaryColor;
       margin: 2px;
     }
@@ -16,7 +17,7 @@
   
       .contacto__list {
         list-style-type: none;
-        padding: 0 10px;
+        padding: 5px 10px;
   
         .contacto__link {
           font-size: 2rem;
@@ -24,9 +25,10 @@
         }
       }
       .contacto__name {
+        font-family: "EB Garamond", serif;
         color: $primaryColor;
         list-style-type: none;
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
     }
   }
