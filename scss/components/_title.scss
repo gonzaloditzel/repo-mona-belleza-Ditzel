@@ -1,8 +1,11 @@
 .title {
-    font-size: 3rem;
+    font-family: "Dancing Script", cursive;
+    font-size: 4rem;
     text-align: center;
     padding: 6px;
-    background-color: $primaryColor;
-    color: $secondaryColor;
+    background-color: pink;
+    color: $primaryColor;
+    border-bottom: solid $primaryColor 2px;
+    border-top: solid $primaryColor 2px;
 }
 

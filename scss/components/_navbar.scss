@@ -3,10 +3,9 @@
   top: 0;
   z-index: 2000;
   .navbar {
-    border-bottom: solid $primaryColor 2px;
-
     .navbar__link {
-      @include text(center, 1.8rem, 600);
+      @include text(center, 2.5rem, 600);
+      font-family: "Dancing Script", cursive;
       text-decoration: none;
       color: $primaryColor;
       padding: 5px 15px;
@@ -19,7 +18,7 @@
     }
     .navbar__list--contacto {
       list-style-type: none;
-      padding: 0 8px;
+      padding: 5px 8px;
 
       .navbar__link--contacto {
         font-size: 2rem;
@@ -28,4 +27,18 @@
       }
     }
   }
+  .scroll-indicator-container{
+    position: absolute;
+    width: 100%;
+    height: 5px;
+  
+    .scroll-indicator-bar{
+      background-color: #e485cc;
+      width: 0%;
+      height: 100%;
+      box-shadow: 0 5px 25px #e46cc6,
+                  0 5px 50px #e46cc6;
+    }
+  }
 }
+

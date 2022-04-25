@@ -95,12 +95,11 @@
     justify-content: center;
 
     .contacto__title {
-      font-size: 2.5rem;
-      font-weight: 600;
+      font-size: 3rem;
     }
 
     .contacto__menu {
-      margin-top: 10px;
+      margin-top: 20px;
     }
   }
 
@@ -147,6 +146,21 @@
 }
 
 @media (min-width: 900px) {
+  ::-webkit-scrollbar{
+    background-color: #fff;
+    width: 13px;
+    border-radius: 2rem;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background: #e485cc;
+    width: 100%;
+    border-radius: 2rem;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+    background: #dd5fbe;
+  }
   .row-mobile{
     display: none;
   }
@@ -159,14 +173,14 @@
 
   #hero {
     .main__container {
-      width: 550px;
+      width: 500px;
   
       .main__title {
-        font-size: 4rem;
+        font-size: 4.5rem;
       }
   
       .main__text {
-        @include text(center, 2rem, 600);
+        @include text(center, 2.5rem, 500);
       }
     }
   }
@@ -187,7 +201,7 @@
   }
 
   .servicios__text {
-    @include text(center, 2rem, 600);
+    @include text(center, 2.5rem, 500);
     margin: -30px 20px 0 20px;
 
     &:hover {

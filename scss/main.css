@@ -25,25 +25,31 @@
   margin: 20px auto;
 }
 
-.turnos__title {
-  margin: 0;
-}
-
 /**********************MIXINS************************/
 .servicios__text {
   text-align: center;
   font-size: 2rem;
   font-weight: 600;
+  font-family: "EB Garamond", serif;
   margin: -30px 20px 0 20px;
 }
 
 .card__title {
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  -webkit-text-decoration: underline 2px;
-          text-decoration: underline 2px;
-  margin-bottom: 15px;
+  font-family: "Dancing Script", cursive;
+  height: 100px;
+  border-top: 2px black solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /**********************MAP, APLICADO EN MAIN.SCSS************************/
@@ -53,7 +59,7 @@ html {
 }
 
 * {
-  font-family: "Roboto", "Ubuntu", sans-serif;
+  font-family: "EB Garamond", serif;
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -61,6 +67,7 @@ html {
 }
 
 #hero {
+  border-top: solid black 2px;
   background: url(/img/fondo.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 80vh;
@@ -100,8 +107,10 @@ html {
 }
 
 #hero .main__container .main__title {
-  background-color: black;
-  color: white;
+  background-color: pink;
+  color: black;
+  border: 2px solid black;
+  font-family: "Dancing Script", cursive;
   font-size: 3.5rem;
   padding: 10px;
   margin-bottom: 15px;
@@ -109,9 +118,13 @@ html {
 
 #hero .main__container .main__text {
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 500;
+  background-color: #f3f3f3;
+  border: 2px solid black;
+  font-family: "EB Garamond", serif;
   margin-bottom: 15px;
+  padding: 10px;
 }
 
 #navbar {
@@ -121,14 +134,11 @@ html {
   z-index: 2000;
 }
 
-#navbar .navbar {
-  border-bottom: solid black 2px;
-}
-
 #navbar .navbar .navbar__link {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 600;
+  font-family: "Dancing Script", cursive;
   text-decoration: none;
   color: black;
   padding: 5px 15px;
@@ -143,7 +153,7 @@ html {
 
 #navbar .navbar .navbar__list--contacto {
   list-style-type: none;
-  padding: 0 8px;
+  padding: 5px 8px;
 }
 
 #navbar .navbar .navbar__list--contacto .navbar__link--contacto {
@@ -152,9 +162,23 @@ html {
   padding: 5px;
 }
 
+#navbar .scroll-indicator-container {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+}
+
+#navbar .scroll-indicator-container .scroll-indicator-bar {
+  background-color: #e485cc;
+  width: 0%;
+  height: 100%;
+  -webkit-box-shadow: 0 5px 25px #e46cc6, 0 5px 50px #e46cc6;
+          box-shadow: 0 5px 25px #e46cc6, 0 5px 50px #e46cc6;
+}
+
 #contacto {
   border-top: 2px black solid;
-  background-color: salmon;
+  background-color: pink;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -163,8 +187,9 @@ html {
 
 #contacto .contacto__title {
   text-align: center;
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 2.6rem;
+  font-weight: 760;
+  font-family: "Dancing Script", cursive;
   color: black;
   margin: 2px;
 }
@@ -181,7 +206,7 @@ html {
 
 #contacto .contacto__menu .contacto__list {
   list-style-type: none;
-  padding: 0 10px;
+  padding: 5px 10px;
 }
 
 #contacto .contacto__menu .contacto__list .contacto__link {
@@ -190,17 +215,19 @@ html {
 }
 
 #contacto .contacto__menu .contacto__name {
+  font-family: "EB Garamond", serif;
   color: black;
   list-style-type: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .main__btn, .diseño__main-btn .diseño__btn, .servicio__main-btn .servicio__btn {
-  background-color: transparent;
+  font-family: "Dancing Script", cursive;
+  background-color: pink;
+  border: solid black 2px;
   width: 200px;
   height: 50px;
-  border: solid black 2px;
-  font-size: 2rem;
+  font-size: 2.8rem;
   font-weight: 700;
   cursor: pointer;
 }
@@ -212,12 +239,15 @@ html {
   transition: 0.6s ease-in-out;
 }
 
-.title, .servicios__title, .diseños__title, .turnos__title {
-  font-size: 3rem;
+.title, .servicios__title, .diseños__title {
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
   text-align: center;
   padding: 6px;
-  background-color: black;
-  color: white;
+  background-color: pink;
+  color: black;
+  border-bottom: solid black 2px;
+  border-top: solid black 2px;
 }
 
 @media (max-width: 900px) {
@@ -315,11 +345,10 @@ html {
             justify-content: center;
   }
   #contacto .contacto__title {
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 3rem;
   }
   #contacto .contacto__menu {
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .btn-contact {
     display: -ms-grid;
@@ -368,6 +397,19 @@ html {
 }
 
 @media (min-width: 900px) {
+  ::-webkit-scrollbar {
+    background-color: #fff;
+    width: 13px;
+    border-radius: 2rem;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #e485cc;
+    width: 100%;
+    border-radius: 2rem;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #dd5fbe;
+  }
   .row-mobile {
     display: none;
   }
@@ -380,15 +422,15 @@ html {
 
 @media (min-width: 1024px) {
   #hero .main__container {
-    width: 550px;
+    width: 500px;
   }
   #hero .main__container .main__title {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
   #hero .main__container .main__text {
     text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: 500;
   }
   .contacto2 {
     display: -ms-grid;
@@ -408,8 +450,8 @@ html {
   }
   .servicios__text {
     text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: 500;
     margin: -30px 20px 0 20px;
   }
   .servicios__text:hover {
@@ -501,7 +543,7 @@ html {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(11, 183, 123, 0.6);
+  background-color: rgba(230, 113, 157, 0.6);
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   opacity: 0;
@@ -511,8 +553,9 @@ html {
 #servicios .servicios__grid .servicios__grid--container .servicios__imgs .servicios__img-bg .servicios__text-bg {
   text-align: center;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   padding: 32px;
+  font-family: "EB Garamond", serif;
 }
 
 /****************************** PAGINA SERVICIOS  *****************************/
@@ -523,8 +566,11 @@ html {
 
 #servicios__main .container-fluid .card-text {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 500;
+  font-family: "EB Garamond", serif;
+  border-top: 2px black solid;
+  padding-top: 10px;
 }
 
 #servicios__main .container-fluid .card__img {
@@ -744,16 +790,34 @@ html {
 
 #alquileres .card-text {
   text-align: center;
-  font-size: 1.7rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "EB Garamond", serif;
+  border-top: 2px black solid;
+  padding-top: 10px;
+}
+
+#tabla {
+  margin-bottom: 20px;
+}
+
+#tabla .table-bordered {
+  border: 2px black solid;
+  margin-bottom: 0;
+}
+
+#tabla thead {
+  background-color: pink;
 }
 
 #tabla th {
-  font-size: 20px;
+  font-size: 25px;
+  font-family: "Dancing Script", cursive;
 }
 
 #tabla td {
-  font-size: 15px;
+  font-size: 20px;
+  font-family: "EB Garamond", serif;
 }
 
 /****************************** PAGINA CONTACTO *****************************/
@@ -798,8 +862,6 @@ html {
 
 .contacto__hero .contacto2 .fieldset .legend {
   font-family: "Dancing Script", cursive;
-  -webkit-text-decoration: underline 1px;
-          text-decoration: underline 1px;
   font-size: 4rem;
   font-weight: 600;
 }
@@ -935,7 +997,7 @@ html {
 
 .mdi2 {
   font-size: 50px;
-  color: salmon;
+  color: pink;
 }
 
 /***********************************************************/

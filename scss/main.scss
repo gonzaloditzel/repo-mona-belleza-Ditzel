@@ -48,14 +48,16 @@
           top: 0;
           width: 100%;
           height: 100%;
-          background-color: rgba(11, 183, 123, 0.6);
+          background-color: rgba(230, 113, 157, 0.6);
           transition: all 500ms ease-in-out;
           opacity: 0;
           visibility: hidden;
 
+
           .servicios__text-bg {
-            @include text(center, 2rem, 600);
+            @include text(center, 2rem, 500);
             padding: 32px;
+            font-family: "EB Garamond", serif;
           }
         }
       }
@@ -73,7 +75,10 @@
     }
 
     .card-text {
-      @include text(center, 1.6rem, 500);
+      @include text(center, 2rem, 500);
+      font-family: "EB Garamond", serif;
+      border-top: 2px black solid;
+      padding-top: 10px;
     }
 
     .card__img {
@@ -257,17 +262,32 @@
   }
 
   .card-text {
-    @include text(center, 1.7rem, 400);
+    @include text(center, 2rem, 500);
+    font-family: "EB Garamond", serif;
+    border-top: 2px black solid;
+    padding-top: 10px;
   }
 }
-
+ 
 #tabla {
+  margin-bottom: 20px;
+
+  .table-bordered{
+    border: 2px black solid;
+    margin-bottom: 0;
+  }
+  thead{
+    background-color: pink;
+  }
+
   th {
-    font-size: map-get($map: $font-size, $key: "dos");
+    font-size: map-get($map: $font-size, $key: "dosymedio");
+    font-family: "Dancing Script", cursive;
   }
 
   td {
-    font-size: map-get($map: $font-size, $key: "unoymedio");
+    font-size: map-get($map: $font-size, $key: "dos");
+    font-family: "EB Garamond", serif;
   }
 }
 
@@ -309,7 +329,6 @@
 
       .legend {
         font-family: "Dancing Script", cursive;
-        text-decoration: underline 1px;
         font-size: 4rem;
         font-weight: 600;
       }
